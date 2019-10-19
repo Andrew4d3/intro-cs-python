@@ -119,3 +119,71 @@ Each programming language has:
   - Program crashes, stops running
   - Program runs forever
   - Program gives an answer but different than expected (this is the worst scenario)
+
+# Types
+
+## Python Programms
+
+- A Python program, sometimes called a script, is a sequence of definitions and commands.
+- The commands (or statements) are executed by the Python interpreter in something called the shell.
+
+### Commands
+
+- A command, often called a statement, instructs the interpreter to do something.
+- For example, the statement: `print('Yankees rule!')` instructs the interpreter
+  to call the function print , which will output the string "Yankees rule!" to the win-
+  dow associated with the shell.
+
+## Objects
+
+- Objects are the core things that Python programs manipulate.
+- Every object has a type that defines the kinds of things that programs can do with that object.
+
+### Type of Objects
+
+- **Scalar**: cannot be subdivided.
+- **Non-scalar**: have internal structure that can be accessed.
+
+## Scalar objects.
+
+- There are four type of scalar objects:
+  - **int**: represent integers, ex. 5
+  - **float**: represent real numbers, ex. 3.27
+  - **bool**: represent Boolean values `True` and `False`
+  - **NoneType**: special and has one value, None
+- You can use `type()` to see the type of an object
+
+### Casting scalar objects
+
+- Yout can convert object of one type to another. Example:
+  - `float(3)` converts integer 3 to float 3.0
+  - `int(3.9)` truncates float 3.9 to integer 3
+
+## Expressions and Operators
+
+- An expression is a combination of objects and operators.
+- An expression has a value, which has a type
+
+### Operations on Ints and Floats
+
+- Some common operations:
+  - `i+j`: the sum
+  - `i-j`: the difference
+  - `i*j`: the product
+  - `i/j`: division
+  - `i//j`: int division
+  - `i%j`: the remainder when i is divided by j
+  - `i**j`: i to the power of j
+- Sum, difference, product, division and power are of type **int** if both values are int, and float if one of the values is float
+- The operations int division and remainder are always float.
+
+### Operators Precedence
+
+- You can use parentheses to force the operators precedence. Example:
+  - `3*5+1` evaluates to 16
+  - `3*(5+1)` evaluates to 18
+- Otherwise, you have to rely on the following default precedence:
+  1. `**`
+  2. `*`
+  3. `/`
+  4. `+` and `-` executed from left to right.
