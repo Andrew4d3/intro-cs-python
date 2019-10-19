@@ -77,10 +77,7 @@ This machine can store and execute instructions by creating/using an instruction
 
 - A programming language is said to be Turing complete if it can be used to
   simulate a universal Turing Machine.
-- All modern programming languages are
-  Turing complete. As a consequence, anything that can be programmed in one
-  programming language (e.g., Python) can be programmed in any other pro-
-  gramming language (e.g., Java).
+- All modern programming languages are Turing complete. As a consequence, anything that can be programmed in one programming language (e.g., Python) can be programmed in any other pro- gramming language (e.g., Java).
 
 # Languages
 
@@ -100,8 +97,7 @@ Each programming language has:
 
 ## The Syntax
 
-- Defines which strings of characters and symbols are
-  well formed
+- Defines which strings of characters and symbols are well formed
 - Example:
   - `3.2*5` Syntactically valid because it meets the criteria `<value> <operator> <value>`
   - `3.2 3.2` Syntactically incorrect. Doesn't meet the past criteria.
