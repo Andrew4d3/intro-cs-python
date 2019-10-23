@@ -187,3 +187,82 @@ Each programming language has:
   2. `*`
   3. `/`
   4. `+` and `-` executed from left to right.
+
+# Variables and Values
+**Variables** provide a way to associate names with objects:
+
+```
+pi = 3
+radius = 11
+area = pi * (radius**2)
+radius = 14
+```
+This is what happens:
+![image](https://user-images.githubusercontent.com/1868409/67391140-6752c580-f574-11e9-9287-f2afc5389fb9.png)
+
+
+- If the program then executes radius = 14, the name radius is rebound to a
+different object of type int, as shown in the right panel of the figure above.
+- Note that this assignment has no effect on the value to which area is bound. It is still bound to the object denoted by the expression 3*(11**2).
+
+## Multiple Assignment
+
+- Python allows multiple assignment. Example:
+    - `x, y = 2, 3`
+- The past assignment expression binds x to 2 and y to 3.
+- This is convenient since it allows you to use multiple assignment to swap the bindings of two variables. Example:
+
+```
+x, y = 2, 3
+x, y = y, x
+print('x =', x)
+print('y =', y)
+````
+- The past chunk of code will print: 
+```
+x = 3
+y = 2
+```
+
+## Comparison and Logic operators
+- `i>j`
+- `i>=j`
+- `i<j`
+- `i<=j`
+- `i==j`: **equality** test, `True` if `i` equals `j`
+- `i!=j`: **inequality** test, `True` if `i` not equal to `j`
+- `not a`: `True` if a is `False`, `False` if a is `True`
+- `a and b`: `True` if both are `True`
+- `a or b`: `True` if either or both are `True`
+
+## Branching Programs
+
+- The kinds of computations we have been looking at thus far are called straightline
+programs. They execute one statement after another in the order in which
+they appear, and stop when they run out of statements.
+- Branching programs are more interesting. The simplest branching statement is a conditional. As shown next:
+
+```
+if <Boolean expression>:
+    <block of code>
+else:
+    <block of code>
+```
+- This is a real example:
+```
+if x%2 == 0:
+    print('Even')
+else:
+    print('Odd')
+print('Done with conditional')
+```
+- Indentation is semantically meaningful in Python. For example, if the last statement in the above code were indented it would be part of the block of code
+
+## Constant-time programs
+
+- A straight-line program, that has n lines of code, will take n units of time to run.
+- A branching program with *n* lines of code might take less than *n* units of time to run, but it cannot take more, since each line of code is executed at most once.
+- A program for which the maximum running time is bounded by the length
+of the program is said to run in constant time. It means that there exists a constant, *k*, such that the program is guaranteed to take no more than *k* steps to run. This implies that the running time does not grow with the size of the input to the program.
+- Constant-time programs are quite limited in what they can do. Consider, for example, writing a program to tally the votes in an election. It would be truly surprising if one could write a program that could do this in a time that was independent of the number of votes cast. In fact, one can prove that it is impossible to do so.
+- The study of the intrinsic difficulty of problems is the topic of **computational complexity**.
